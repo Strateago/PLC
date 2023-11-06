@@ -20,6 +20,7 @@ totalVendas n | n == 0 = vendas 0
 addEspacos :: Int -> String
 addEspacos 0 = ""
 addEspacos n = " " ++ addEspacos (n-1)imprimeTabela n = putStr ("Semana    Venda\n" ++ imprimeSemana n ++ "\n" ++ imprimeTotal n ++ imprimeMedia n)
+
 imprimeTotal :: Int -> String
 imprimeTotal n = "Total: " ++ show (totalVendas n) ++ "\n"
 
