@@ -21,6 +21,10 @@ addEspacos :: Int -> String
 addEspacos 0 = ""
 addEspacos n = " " ++ addEspacos (n-1)
 
+imprimeSemana :: Int -> String
+imprimeSemana 0 = "  0" ++ addEspacos 8 ++ show (vendas 0)
+imprimeSemana n = imprimeSemana (n-1) ++ "\n  " ++ show n ++  addEspacos 8 ++ show (vendas n)
+
 imprimeTotal :: Int -> String
 imprimeTotal n = "Total: " ++ show (totalVendas n) ++ "\n"
 
@@ -29,4 +33,3 @@ imprimeMedia n = "Media: " ++ show (fromIntegral (totalVendas n) / fromIntegral 
 
 imprimeTabela :: Int -> IO()
 imprimeTabela n = putStr ("Semana    Venda\n" ++ imprimeSemana n ++ "\n" ++ imprimeTotal n ++ imprimeMedia n)
-
