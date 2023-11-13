@@ -109,4 +109,14 @@ sumPairs :: [(Int, Int)] -> [Int]
 sumPairs [] = []
 sumPairs ((x, y):t) = (x+y):(sumPairs t)
 
--- AULA 4 -----------------------------------------------------------------------------------------------------------
+-- AULA 4 (Monitoria) -----------------------------------------------------------------------------------------------------------
+soma :: Int -> Int
+soma 0 = 0
+soma n = n + soma (n-1)
+
+par :: Int -> Bool
+par n | mod n 2 == 1 = False
+      | otherwise = True
+
+doubleList :: [Int] -> [Int]
+doubleList xs = [2*a|a <- xs]
