@@ -1,0 +1,37 @@
+data Mov = Z Double | X Double | Y Double
+    deriving (Eq, Show, Read)
+
+type Point3D = (Double, Double, Double)
+
+type Object3D = [Point3D]
+
+extractCoord :: Point3D -> Mov-> Point3D
+extractCoord (x, y, z) (X mov) = (x+mov, y, z)
+extractCoord (x, y, z) (Y mov) = (x, y + mov, z)
+extractCoord (x, y, z) (Z mov) = (x, y, z + mov)
+
+transladaObjeto :: Object3D -> [Mov] -> Object3D
+transladaObjeto obj trans = case (obj, trans) of
+                                 ([], ts) -> []
+                                 (ps, []) -> ps
+                                 (ps, ts) -> map (\p -> foldl extractCoord p ts) ps
+
+
+rotacionaObjeto :: Double -> Double -> Double -> Object3D -> Maybe Object3D
+toracionaObjeto a, b, c, objeto = 
+
+
+toRad :: Double -> Double
+toRad a = div a 180 * pi
+
+
+
+main = do
+       coord <- getLine
+       mov <- getLine
+       angX <- getLine
+       angY <- getLine
+       angZ <- getLine
+       let transladado = transladaObjeto (read coord :: Object3D) (read mov :: [Mov])
+       let rotacionado = rotacionaObjeto angX angY angZ transladado
+       print rotacionado
