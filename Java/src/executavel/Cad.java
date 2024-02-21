@@ -15,4 +15,10 @@ public class Cad{
         c.creditar(Double.parseDouble(JOptionPane.showInputDialog("Depositar")));
         JOptionPane.showMessageDialog(null, "Conta: " + c.getNumero() + '\n' + "Saldo: " + c.getSaldo());
     }
+    public String contas(int num){
+        String contas = "";
+        for(int a = 0; a < num; a++){
+            contas += (função q retorna() + '\n');
+        }
+    }
 }
