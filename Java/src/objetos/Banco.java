@@ -1,12 +1,12 @@
 package objetos;
 
 public class Banco {
-    private ContaAbstrata[] accounts;
+    private RepositorioContas accounts;
     private int indice;
     private double taxa_juros;
 
-    public Banco(){
-        this.accounts = new ContaAbstrata[100];
+    public Banco(RepositorioContas rep){
+        this.accounts = new RepositorioContasArray();
         this.indice = 0;
         this.taxa_juros = 0.01;
     }

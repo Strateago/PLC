@@ -1,7 +1,5 @@
 package executavel;
-import objetos.Conta;
-import objetos.Conta_Esp;
-import objetos.Poupança;
+import objetos.ContaAbstrata;
 
 import javax.swing.JOptionPane;
 
