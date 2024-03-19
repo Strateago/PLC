@@ -1,0 +1,5 @@
+Uma Interface seria utilizada para criar um padrão global de veículo, por exemplo uma interface "Veículo" que vai ter os métodos compartilhados a todos os veículos, sem implementação, já que cada veículo vai ter uma forma diferente de implementar os métodos. 
+
+Já uma opção de classe abstrata seria uma classe "Carro" ou "Moto", que podemos dizer que é uma generalização de um carro ou moto, porém cada carro ou moto podem ter uma implementação diferente para alguns detalhes dependendo do modelo, enquanto compartilham diretamente os métodos que são sempre idênticos independente dos modelos.
+
+Quanto à uma classe concreta, cada modelo de carro ou moto que seriam objetos finais, tem os seus próprios métodos e nenhum deles é um método abstrato, embora ainda possam ser reutilizados por futuras versões do modelo.
